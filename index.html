@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Experience an authentic cultural and culinary tour in Bnei Brak, led by a local guide with deep insights into the Ultra-Orthodox community."
+    />
+    <link rel="icon" href="/pictures/eat_pray_avi.jpeg" type="image/x-icon" />
+
+    <title>Eat Pray Avi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-playfair {
+        font-family: "Playfair Display", serif;
+      }
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+      [lang="he"] {
+        direction: rtl;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="font-inter bg-gray-50">
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50">
+      <button
+        id="langSwitch"
+        class="px-4 py-2 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition duration-300 shadow-md"
+      >
+        <span class="en">עברית</span>
+        <span class="he hidden">English</span>
+      </button>
+    </div>
+
+    <!-- Floating Contact Buttons -->
+    <div class="fixed bottom-4 right-4 z-50 space-y-3">
+      <!-- Instagram Button -->
+      <a
+        href="https://www.instagram.com/eat.pray.avi/"
+        target="_blank"
+        class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full hover:w-auto hover:px-4 hover:pr-5 transition-all duration-300 shadow-lg group"
+      >
+        <i class="fab fa-instagram text-xl"></i>
+        <span
+          class="w-0 overflow-hidden group-hover:w-auto group-hover:ml-2 transition-all duration-300 whitespace-nowrap"
+        >
+          <span class="en">Follow Us</span>
+          <span class="he hidden mr-2">עקבו אחרינו</span>
+        </span>
+      </a>
+
+      <!-- WhatsApp Button -->
+      <a
+        href="https://wa.me/972548047997"
+        target="_blank"
+        class="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full hover:w-auto hover:px-4 hover:pr-5 transition-all duration-300 shadow-lg group"
+      >
+        <i class="fab fa-whatsapp text-xl"></i>
+        <span
+          class="w-0 overflow-hidden group-hover:w-auto group-hover:ml-2 transition-all duration-300 whitespace-nowrap"
+        >
+          <span class="en">WhatsApp Us</span>
+          <span class="he hidden mr-2">צרו קשר בוואטסאפ</span>
+        </span>
+      </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative flex flex-col items-center justify-center">
+      <!-- Logo Section -->
+      <div class="w-full bg-gray-50 py-12">
+        <div class="max-w-4xl mx-auto text-center px-4">
+          <div class="inline-block p-2 rounded-full border-2 border-black">
+            <img
+              src="pictures/eat_pray_avi.jpeg"
+              alt="Eat Pray Avi Logo"
+              class="mx-auto h-48 w-auto object-contain rounded-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Section with Background -->
+      <div class="relative w-full h-[60vh] flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+        <div
+          class="absolute inset-0 bg-[url('/pictures/background.jpeg')] bg-cover bg-center"
+        ></div>
+
+        <div class="relative z-20 text-center text-white px-4">
+          <h1 class="font-playfair text-5xl md:text-7xl font-bold mb-6">
+            <span class="en">Experience Bnei Brak</span>
+            <span class="he hidden">בני ברק - גשר בין העולמות</span>
+          </h1>
+          <p class="text-xl md:text-2xl max-w-2xl mx-auto">
+            <span class="en"
+              >Discover the Ultra-Orthodox world up close - through food,
+              stories, and people</span
+            >
+            <span class="he hidden"
+              >לגלות יחד את העולם החרדי מקרוב - דרך אוכל, סיפורים ואנשים</span
+            >
+          </p>
+          <a
+            href="#contact"
+            class="inline-block mt-8 px-8 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition duration-300"
+          >
+            <span class="en">Book Your Tour</span>
+            <span class="he hidden">הזמנת סיור</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About the Guide -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-playfair text-4xl font-bold text-center mb-12">
+          <span class="en">About Your Guide</span>
+          <span class="he hidden">קצת עלי</span>
+        </h2>
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="relative w-48 h-48 flex-shrink-0">
+            <div
+              class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 animate-pulse"
+            ></div>
+            <div class="absolute inset-1 rounded-full bg-white"></div>
+            <div
+              class="absolute inset-2 rounded-full overflow-hidden shadow-inner"
+            >
+              <img
+                src="pictures/avi_img.jpeg"
+                alt="Guide"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <p class="text-lg text-gray-700 leading-relaxed flex-1">
+            <span class="en"
+              >Hi, I'm Avi.<br /><br />
+              I grew up in Bnei Brak – right in the heart of the Ultra-Orthodox
+              world. I studied in top yeshivas and lived that culture fully,
+              until one day I realized I was seeking something else.<br /><br />
+              So I took a new path – national service, a degree in computer
+              science, and today I work as a software developer by day and a
+              storyteller between worlds on weekends.<br /><br />
+              This tour is exactly that – a bridge. Come with me to taste, hear,
+              and see Bnei Brak from a different perspective.</span
+            >
+            <span class="he hidden"
+              >היי, אני אבי קאופמן. גדלתי בבני ברק - ממש עמוק בתוך העולם החרדי.
+              למדתי בישיבות, חייתי את התרבות החרדית, עד שהבנתי שאני רוצה משהו
+              אחר.<br /><br />
+              אז יצאתי לדרך חדשה – שירות לאומי, מעבר לתל אביב, השלמת בגרויות,
+              ותואר במדעי המחשב. כיום, אני מתכנת בחברת סטארט-אפ במהלך השבוע,
+              ומחבר בין עולמות בסופי השבוע.<br /><br />
+              הסיור הזה נועד לראות מעבר לסטריאוטיפ – לחבר. בואו איתי לטעום,
+              לשמוע ולראות את בני ברק בעיניים קצת אחרות.</span
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What to Expect -->
+    <section class="py-20 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-playfair text-4xl font-bold text-center mb-12">
+          <span class="en">What to Expect</span>
+          <span class="he hidden">מה מצפה לנו?</span>
+        </h2>
+        <div dir="ltr" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div
+              class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border border-gray-800 shadow-lg hover:shadow-xl transition-all duration-500"
+            >
+              <img
+                src="pictures/eat.jpeg"
+                alt="EAT"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-gray-600">
+              <span class="en"
+                >Experience the vibrant Thursday night Shabbat market
+                atmosphere</span
+              >
+              <span class="he hidden"
+                >כי הדרך להכיר באמת, עוברת דרך הבטן… נטעם צ'ולנט, קיגל, חלה,
+                ומיני מאפים, הישר מהמעדניות המוערכות ביותר בעיר</span
+              >
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border border-gray-800 shadow-lg hover:shadow-xl transition-all duration-500"
+            >
+              <img
+                src="pictures/pray.jpeg"
+                alt="PRAY"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-gray-600">
+              <span class="en"
+                >Sample challah, kugel, cholent, and smoked meat</span
+              >
+              <span class="he hidden"
+                >חמישים גוונים של שחור - נכיר את כל גווני החברה החרדית, המשמעות
+                החברתית של כל כפל בכובע ואורך החליפות, התככים שבין הישיבות,
+                והערבות ההדדית בתוך בקהילה המעוררת השתאות
+              </span>
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border border-gray-800 shadow-lg hover:shadow-xl transition-all duration-500"
+            >
+              <img
+                src="pictures/avi.jpeg"
+                alt="AVI"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-gray-600">
+              <span class="en"
+                >Meet locals and engage in open Q&A sessions</span
+              >
+              <span class="he hidden"
+                >כמי שגדל וחווה את החיים כילד וכנער בתוך הקהילה החרדית בבני ברק
+                ועזב אותה, אני מביא לסיור נקודת מבט ייחודית וכנה, המגשרת בין
+                עולמות ומאפשרת הצצה מעמיקה ואותנטית המבוססת על ידע ועל החוויה
+                האישית שלי</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Tours -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-playfair text-4xl font-bold text-center mb-12">
+          <span class="en">Upcoming Tours</span>
+          <span class="he hidden">סיורים קרובים</span>
+        </h2>
+        <div class="space-y-6">
+          <div
+            class="tour bg-gray-50 px-8 py-6 rounded-lg hover:bg-gray-100 transition duration-300"
+            data-availability="none"
+          >
+            <div
+              class="flex items-center justify-between flex-col md:flex-row gap-6 md:gap-0"
+            >
+              <div>
+                <h3 class="text-2xl font-semibold mb-1">
+                  <span class="en">Thursday, May 1th</span>
+                  <span class="he hidden">חמישי, 1 במאי</span>
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  <span class="en">Start: 19:00 | End: 21:30</span>
+                  <span class="he hidden">התחלה: 19:00 | סיום: 21:30</span>
+                </p>
+                <p class="text-gray-600 text-lg">
+                  <span class="en"
+                    >Meeting Point: Bnei Brak Central Bus Station</span
+                  >
+                  <span class="he hidden">נקודת מפגש: ראב"ד 32 בני ברק</span>
+                </p>
+                <p class="text-gray-600 text-lg">
+                  <span class="en">End Point: Bnei Brak Market</span>
+                  <span class="he hidden"
+                    >נקודת סיום: חזון אי"ש 35 בני ברק</span
+                  >
+                </p>
+
+                <!-- מצב זמינות -->
+                <p class="availability-status text-lg font-semibold mt-2"></p>
+              </div>
+
+              <!-- כפתור הרשמה -->
+              <a
+                href="#contact"
+                class="register-btn px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 text-lg"
+                data-tour-date="חמישי, 1 במאי"
+              >
+                <span class="en">Book Now</span>
+                <span class="he hidden">להרשמה</span>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="tour bg-gray-50 px-8 py-6 rounded-lg hover:bg-gray-100 transition duration-300"
+            data-availability="few"
+          >
+            <div
+              class="flex items-center justify-between flex-col md:flex-row gap-6 md:gap-0"
+            >
+              <div>
+                <h3 class="text-2xl font-semibold mb-1">
+                  <span class="en">Thursday, May 8th</span>
+                  <span class="he hidden">חמישי, 8 במאי</span>
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  <span class="en">Start: 19:00 | End: 21:30</span>
+                  <span class="he hidden">התחלה: 19:00 | סיום: 21:30</span>
+                </p>
+                <p class="text-gray-600 text-lg">
+                  <span class="en"
+                    >Meeting Point: Bnei Brak Central Bus Station</span
+                  >
+                  <span class="he hidden">נקודת מפגש: ראב"ד 32 בני ברק</span>
+                </p>
+                <p class="text-gray-600 text-lg">
+                  <span class="en">End Point: Bnei Brak Market</span>
+                  <span class="he hidden"
+                    >נקודת סיום: חזון אי"ש 35 בני ברק</span
+                  >
+                </p>
+
+                <!-- מצב זמינות -->
+                <p class="availability-status text-lg font-semibold mt-2"></p>
+              </div>
+
+              <!-- כפתור הרשמה -->
+              <a
+                href="#contact"
+                class="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 text-lg"
+                data-tour-date="חמישי, 8 במאי"
+              >
+                <span class="en">Book Now</span>
+                <span class="he hidden">להרשמה</span>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="tour bg-gray-50 px-8 py-6 rounded-lg hover:bg-gray-100 transition duration-300"
+            data-availability="available"
+          >
+            <div
+              class="flex items-center justify-between flex-col md:flex-row gap-6 md:gap-0"
+            >
+              <div>
+                <h3 class="text-2xl font-semibold mb-1">
+                  <span class="en">Thursday, May 22th</span>
+                  <span class="he hidden">חמישי, 22 במאי</span>
+                </h3>
+                <p class="text-gray-600 text-lg">
+                  <span class="en">Start: 19:00 | End: 21:30</span>
+                  <span class="he hidden">התחלה: 19:00 | סיום: 21:30</span>
+                </p>
+                <p class="text-gray-600 text-lg">
+                  <span class="en"
+                    >Meeting Point: Bnei Brak Central Bus Station</span
+                  >
+                  <span class="he hidden">נקודת מפגש: ראב"ד 32 בני ברק</span>
+                </p>
+                <p class="text-gray-600 text-lg">
+                  <span class="en">End Point: Bnei Brak Market</span>
+                  <span class="he hidden"
+                    >נקודת סיום: חזון אי"ש 35 בני ברק</span
+                  >
+                </p>
+
+                <!-- מקום להודעת זמינות (יישאר ריק אם יש מקומות) -->
+                <p class="availability-status text-lg font-semibold mt-2"></p>
+              </div>
+
+              <!-- כפתור הרשמה -->
+              <a
+                href="#contact"
+                class="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 text-lg"
+                data-tour-date="חמישי, 22 במאי"
+              >
+                <span class="en">Book Now</span>
+                <span class="he hidden">להרשמה</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-playfair text-4xl font-bold text-center mb-12">
+          <span class="en">Gallery</span>
+          <span class="he hidden">גלריית תמונות</span>
+        </h2>
+
+        <!-- Three Main Gallery Images -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="pictures/gallery/gal1.jpeg"
+              alt="Eat"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="pictures/gallery/gal2.jpeg"
+              alt="Pray"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="pictures/gallery/gal3.jpeg"
+              alt="Avi"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Gallery Button -->
+        <div class="text-center">
+          <button
+            onclick="openModal()"
+            class="px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 text-lg font-semibold"
+          >
+            <span class="en">View Photo Gallery</span>
+            <span class="he hidden">לצפייה בגלריית התמונות</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Gallery -->
+    <div
+      id="galleryModal"
+      class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden overflow-y-auto"
+    >
+      <div class="relative min-h-screen py-8">
+        <!-- Close Button -->
+        <button
+          onclick="closeModal()"
+          class="absolute top-4 right-4 text-white hover:text-gray-300 text-4xl"
+        >
+          &times;
+        </button>
+
+        <!-- Modal Content -->
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-white text-3xl font-bold mb-8 text-center">
+            <span class="en">Photo Gallery</span>
+            <span class="he hidden">גלריית תמונות</span>
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Gallery Items -->
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal1.jpeg"
+                alt="Gallery image 1"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal2.jpeg"
+                alt="Gallery image 2"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal3.jpeg"
+                alt="Gallery image 3"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal4.jpeg"
+                alt="Gallery image 4"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal5.jpeg"
+                alt="Gallery image 5"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal6.jpeg"
+                alt="Gallery image 6"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal7.jpeg"
+                alt="Gallery image 7"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal8.jpeg"
+                alt="Gallery image 8"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal9.jpeg"
+                alt="Gallery image 9"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal10.jpeg"
+                alt="Gallery image 10"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal11.jpeg"
+                alt="Gallery image 11"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal12.jpeg"
+                alt="Gallery image 12"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal13.jpeg"
+                alt="Gallery image 13"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal14.jpeg"
+                alt="Gallery image 14"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal15.jpeg"
+                alt="Gallery image 15"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal16.jpeg"
+                alt="Gallery image 16"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal17.jpeg"
+                alt="Gallery image 17"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal18.jpeg"
+                alt="Gallery image 18"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal19.jpeg"
+                alt="Gallery image 19"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal20.jpeg"
+                alt="Gallery image 20"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal21.jpeg"
+                alt="Gallery image 21"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal22.jpeg"
+                alt="Gallery image 22"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal23.jpeg"
+                alt="Gallery image 23"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal24.jpeg"
+                alt="Gallery image 24"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal25.jpeg"
+                alt="Gallery image 25"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal26.jpeg"
+                alt="Gallery image 26"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal27.jpeg"
+                alt="Gallery image 27"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal28.jpeg"
+                alt="Gallery image 28"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal29.jpeg"
+                alt="Gallery image 29"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal30.jpeg"
+                alt="Gallery image 30"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal31.jpeg"
+                alt="Gallery image 31"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal32.jpeg"
+                alt="Gallery image 32"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal33.jpeg"
+                alt="Gallery image 33"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal34.jpeg"
+                alt="Gallery image 34"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal35.jpeg"
+                alt="Gallery image 35"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="pictures/gallery/gal36.jpeg"
+                alt="Gallery image 36"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact & Registration -->
+    <section id="contact" class="py-20 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-playfair text-4xl font-bold text-center mb-12">
+          <span class="en">Contact & Registration</span>
+          <span class="he hidden">צור קשר והרשמה</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-semibold mb-6">
+              <span class="en">Get in Touch</span>
+              <span class="he hidden">צור קשר</span>
+            </h3>
+            <div class="space-y-4">
+              <a
+                href="https://www.instagram.com/eat.pray.avi/"
+                class="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition duration-300"
+                target="_blank"
+              >
+                <i class="fab fa-instagram text-2xl"></i>
+                <span>eat.pray.avi</span>
+              </a>
+              <a
+                href="tel:+1234567890"
+                class="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition duration-300"
+              >
+                <i class="fas fa-phone text-2xl"></i>
+                <span>0548047997</span>
+              </a>
+              <a
+                href="mailto:avi@example.com"
+                class="flex items-center gap-3 text-gray-700 hover:text-blue-600 transition duration-300"
+              >
+                <i class="fas fa-envelope text-2xl"></i>
+                <span>eat.pray.avi@gmail.com</span>
+              </a>
+            </div>
+          </div>
+          <div>
+            <form class="space-y-4">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  <span class="en">Name</span>
+                  <span class="he hidden">שם</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label
+                  for="phone"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  <span class="en">Phone Number</span>
+                  <span class="he hidden">מספר טלפון</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  <span class="en">Email</span>
+                  <span class="he hidden">אימייל</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label
+                  for="tour-date"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  <span class="en">Preferred Tour Date</span>
+                  <span class="he hidden">תאריך סיור מועדף</span>
+                </label>
+                <select
+                  id="tour-date"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                >
+                  <option value="">
+                    <span class="en">Select a date</span>
+                    <span class="he hidden">בחר תאריך</span>
+                  </option>
+                  <option value="may29">
+                    <span class="en">Thursday, May 1th, 19:00</span>
+                    <span class="he hidden">חמישי, 1 במאי, 19:00</span>
+                  </option>
+                  <option value="june12">
+                    <span class="en">Thursday, May 8th, 19:00</span>
+                    <span class="he hidden">חמישי, 8 במאי, 19:00</span>
+                  </option>
+                  <option value="june26">
+                    <span class="en">Thursday, May 22th, 19:00</span>
+                    <span class="he hidden">חמישי, 22 במאי, 19:00</span>
+                  </option>
+                </select>
+              </div>
+              <div>
+                <label
+                  for="custom-tour"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  <span class="en">Custom Tour Request</span>
+                  <span class="he hidden">הזמנת סיור מותאם אישית</span>
+                </label>
+                <textarea
+                  id="custom-tour"
+                  rows="4"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300"
+              >
+                <span class="en">Register Now</span>
+                <span class="he hidden">שליחה</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <p>
+          <span class="en"
+            >&copy; 2024 Bnei Brak Cultural Tour. All rights reserved.</span
+          >
+          <span class="he hidden"
+            >&copy; 2024 סיור תרבותי בבני ברק. כל הזכויות שמורות.</span
+          >
+        </p>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const langSwitch = document.getElementById("langSwitch");
+        const enElements = document.querySelectorAll(".en");
+        const heElements = document.querySelectorAll(".he");
+        let currentLang = "he";
+
+        // Set Hebrew by default
+        document.documentElement.lang = "he";
+        enElements.forEach((el) => el.classList.add("hidden"));
+        heElements.forEach((el) => el.classList.remove("hidden"));
+
+        function switchLanguage() {
+          if (currentLang === "en") {
+            document.documentElement.lang = "he";
+            enElements.forEach((el) => el.classList.add("hidden"));
+            heElements.forEach((el) => el.classList.remove("hidden"));
+            currentLang = "he";
+          } else {
+            document.documentElement.lang = "en";
+            enElements.forEach((el) => el.classList.remove("hidden"));
+            heElements.forEach((el) => el.classList.add("hidden"));
+            currentLang = "en";
+          }
+        }
+
+        langSwitch.addEventListener("click", switchLanguage);
+
+        // =============================
+        // Tour Logic + Availability
+        // =============================
+
+        const tours = document.querySelectorAll(".tour");
+        const registerButtons = document.querySelectorAll("a[href='#contact']");
+        const tourSelect = document.getElementById("tour-date");
+
+        // Step 1: Handle availability + button update
+        tours.forEach((tour) => {
+          const availability = tour.getAttribute("data-availability");
+          const statusElement = tour.querySelector(".availability-status");
+          const button = tour.querySelector("a[href='#contact']");
+          const titleElement = tour.querySelector("h3");
+          const dateText = titleElement ? titleElement.textContent.trim() : "";
+
+          if (!statusElement || !button) return;
+
+          // Add data-tour-date to button
+          button.classList.add("register-btn");
+          button.setAttribute("data-tour-date", dateText);
+
+          if (availability === "none") {
+            statusElement.innerHTML = `
+              <span class="en text-red-600">Sold Out</span>
+              <span class="he hidden text-red-600">לא נותרו מקומות</span>
+            `;
+            button.innerHTML = `
+              <span class="en">Sold Out</span>
+              <span class="he hidden">ההרשמה נסגרה</span>
+            `;
+            button.classList.add(
+              "opacity-50",
+              "cursor-not-allowed",
+              "pointer-events-none"
+            );
+            if (document.documentElement.lang === "he") {
+              button.querySelector(".en").classList.add("hidden");
+              button.querySelector(".he").classList.remove("hidden");
+            } else {
+              button.querySelector(".en").classList.remove("hidden");
+              button.querySelector(".he").classList.add("hidden");
+            }
+          } else if (availability === "few") {
+            statusElement.innerHTML = `
+              <span class="en text-yellow-600">Few spots left</span>
+              <span class="he hidden text-yellow-600">נותרו מקומות בודדים</span>
+            `;
+          }
+        });
+
+        // Step 2: Save clicked date to sessionStorage
+        registerButtons.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const selected = this.getAttribute("data-tour-date");
+            sessionStorage.setItem("selectedTourDate", selected);
+          });
+        });
+
+        // Step 3: Populate <select> with available tours
+        if (tourSelect) {
+          tourSelect.innerHTML = "";
+
+          const placeholder = document.createElement("option");
+          placeholder.disabled = true;
+          placeholder.selected = true;
+          placeholder.innerText =
+            document.documentElement.lang === "he"
+              ? "בחר תאריך"
+              : "Select a date";
+          tourSelect.appendChild(placeholder);
+
+          tours.forEach((tour) => {
+            const availability = tour.getAttribute("data-availability");
+            const titleElement = tour.querySelector("h3");
+            const dateText = titleElement
+              ? titleElement.textContent.trim()
+              : "";
+
+            const option = document.createElement("option");
+            option.value = dateText;
+
+            if (availability === "none") {
+              option.disabled = true;
+              option.innerText =
+                document.documentElement.lang === "he"
+                  ? `${dateText} (אין מקומות)`
+                  : `${dateText} (Sold Out)`;
+            } else {
+              option.innerText = dateText;
+            }
+
+            tourSelect.appendChild(option);
+          });
+        }
+
+        // Step 4: Select saved tour date when #contact is in view
+        const contactSection = document.getElementById("contact");
+
+        if (contactSection && tourSelect) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const selectedTourDate =
+                  sessionStorage.getItem("selectedTourDate");
+                if (selectedTourDate) {
+                  Array.from(tourSelect.options).forEach((opt) => {
+                    if (opt.value === selectedTourDate) {
+                      opt.selected = true;
+                    }
+                  });
+                  sessionStorage.removeItem("selectedTourDate");
+                }
+              }
+            });
+          });
+
+          observer.observe(contactSection);
+        }
+      });
+      // Open the gallery modal
+      function openModal() {
+        const modal = document.getElementById("galleryModal");
+        if (modal) {
+          modal.classList.remove("hidden");
+          document.body.style.overflow = "hidden"; // prevent scrolling background
+        }
+      }
+
+      // Close the gallery modal
+      function closeModal() {
+        const modal = document.getElementById("galleryModal");
+        if (modal) {
+          modal.classList.add("hidden");
+          document.body.style.overflow = "auto"; // allow scrolling background again
+        }
+      }
+
+      // Optional: Close modal if clicking outside content
+      document.addEventListener("click", function (e) {
+        const modal = document.getElementById("galleryModal");
+        if (modal && !modal.classList.contains("hidden")) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        }
+      });
+
+      // Optional: Close modal with Escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>

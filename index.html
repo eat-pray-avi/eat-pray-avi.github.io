@@ -32,6 +32,9 @@
       .hidden {
         display: none;
       }
+      h2 .en {
+        font-family: "Inter", sans-serif;
+      }
     </style>
   </head>
   <body class="font-inter bg-gray-50">
@@ -82,7 +85,7 @@
     <!-- Hero Section -->
     <section class="relative flex flex-col items-center justify-center">
       <!-- Logo Section -->
-      <div class="w-full bg-gray-50 py-12">
+      <div id="logoSection" class="w-full bg-gray-50 py-12">
         <div class="max-w-4xl mx-auto text-center px-4">
           <div class="inline-block p-2 rounded-full border-2 border-black">
             <img
@@ -463,13 +466,13 @@
     <!-- Modal Gallery -->
     <div
       id="galleryModal"
-      class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden overflow-y-auto"
+      class="fixed inset-0 bg-white z-50 hidden overflow-y-auto"
     >
       <div class="relative min-h-screen py-8">
         <!-- Close Button -->
         <button
           onclick="closeModal()"
-          class="absolute top-4 right-4 text-white hover:text-gray-300 text-4xl"
+          class="fixed top-4 right-4 w-12 h-12 flex items-center justify-center text-white text-3xl bg-blue-600 rounded-full hover:bg-blue-700 hover:scale-110 transition-all duration-300 z-50 shadow-lg"
         >
           &times;
         </button>
@@ -885,11 +888,9 @@
     <footer class="py-8 px-4 bg-gray-900 text-white">
       <div class="max-w-4xl mx-auto text-center">
         <p>
-          <span class="en"
-            >&copy; 2024 Bnei Brak Cultural Tour. All rights reserved.</span
-          >
+          <span class="en">&copy; 2024 Eat Pray Avi - All rights reserved</span>
           <span class="he hidden"
-            >&copy; 2024 סיור תרבותי בבני ברק. כל הזכויות שמורות.</span
+            >&copy; 2024 Eat Pray Avi - All rights reserved</span
           >
         </p>
       </div>
@@ -1090,6 +1091,17 @@
 
           observer.observe(contactSection);
         }
+        // Auto-scroll smart after 3 minutes
+        setTimeout(() => {
+          const logoSection = document.getElementById("logoSection");
+          if (logoSection) {
+            const logoHeight = logoSection.offsetHeight;
+            window.scrollTo({
+              top: logoHeight,
+              behavior: "smooth",
+            });
+          }
+        }, 3000); // 3 seconds
       });
 
       // =============================

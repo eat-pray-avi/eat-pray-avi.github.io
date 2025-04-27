@@ -784,7 +784,7 @@
           <div>
             <form
               id="contactForm"
-              action="https://script.google.com/macros/s/AKfycbxMwu82m-O8mHsEdt_XZ0WbAx6mXoGcqVpFvFYiNi-6g9wrWj2u5SmfQRX1cFBw9PsGXA/exec"
+              action="https://script.google.com/macros/s/AKfycbyrgDP_Dw26mpknQv7SIKEtPJHeB_dBKO1OP9XIlMOQyZ1lyV-28Kzq3WnRTD5c2ezAqQ/exec"
               method="POST"
               class="space-y-4"
             >
@@ -1162,7 +1162,6 @@
             formMessage.classList.add("hidden");
           }, 4000); // נעלם אחרי 4 שניות
         }
-
         form.addEventListener("submit", function (event) {
           event.preventDefault();
 
@@ -1170,9 +1169,11 @@
             name: document.getElementById("name").value,
             phone: document.getElementById("phone").value,
             email: document.getElementById("email").value,
-            tourDate: document.getElementById("tour-date").value,
-            comments: document.getElementById("custom-tour").value,
+            "tour-date": document.getElementById("tour-date").value,
+            "custom-tour": document.getElementById("custom-tour").value,
           };
+
+          console.log("Sending data:", formData); // Add this to see what's being sent
 
           fetch(form.action, {
             method: "POST",
@@ -1181,12 +1182,14 @@
               "Content-Type": "application/json",
             },
           })
-            .then((response) => {
-              if (response.ok) {
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Response:", data); // Log the response
+              if (data.result === "success") {
                 form.reset();
                 showMessage("תודה! הטופס נשלח בהצלחה 🎉", true);
               } else {
-                showMessage("משהו השתבש, נסה שוב.", false);
+                showMessage("שגיאה: " + (data.error || "משהו השתבש"), false);
               }
             })
             .catch((error) => {

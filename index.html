@@ -782,12 +782,7 @@
             </div>
           </div>
           <div>
-            <form
-              id="contactForm"
-              action="https://script.google.com/macros/s/AKfycbyrgDP_Dw26mpknQv7SIKEtPJHeB_dBKO1OP9XIlMOQyZ1lyV-28Kzq3WnRTD5c2ezAqQ/exec"
-              method="POST"
-              class="space-y-4"
-            >
+            <form id="contact-form" name="contact-form" class="space-y-4">
               <div>
                 <label
                   for="name"
@@ -798,6 +793,7 @@
                 </label>
                 <input
                   type="text"
+                  name="name"
                   id="name"
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 />
@@ -813,6 +809,7 @@
                 <input
                   type="tel"
                   id="phone"
+                  name="phone"
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 />
               </div>
@@ -827,6 +824,7 @@
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 />
               </div>
@@ -840,6 +838,7 @@
                 </label>
                 <select
                   id="tour-date"
+                  name="tour-date"
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 >
                   <option value="">
@@ -872,6 +871,7 @@
                 </label>
                 <textarea
                   id="custom-tour"
+                  name="custom-tour"
                   rows="4"
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 ></textarea>
@@ -1148,7 +1148,7 @@
         }
       });
       document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("contactForm");
+        const form = document.getElementById("contact-form");
         const formMessage = document.getElementById("formMessage");
 
         function showMessage(message, isSuccess = true) {
@@ -1162,39 +1162,30 @@
             formMessage.classList.add("hidden");
           }, 4000); // נעלם אחרי 4 שניות
         }
-        form.addEventListener("submit", function (event) {
-          event.preventDefault();
+        const scriptURL =
+          "https://script.google.com/macros/s/AKfycbyamtN_dsQeCOnjnvuirZ5I2mLMVqvqWyRSf5uYSkkco5HR4Pbl5HHiMrNJIMuHuqyYyQ/exec";
 
-          const formData = {
-            name: document.getElementById("name").value,
-            phone: document.getElementById("phone").value,
-            email: document.getElementById("email").value,
-            "tour-date": document.getElementById("tour-date").value,
-            "custom-tour": document.getElementById("custom-tour").value,
-          };
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
 
-          console.log("Sending data:", formData); // Add this to see what's being sent
+          const formData = new FormData(form);
 
-          fetch(form.action, {
+          fetch(scriptURL, {
             method: "POST",
-            body: JSON.stringify(formData),
-            headers: {
-              "Content-Type": "application/json",
-            },
+            body: formData,
           })
-            .then((response) => response.json())
+            .then((response) => response.text())
             .then((data) => {
-              console.log("Response:", data); // Log the response
-              if (data.result === "success") {
-                form.reset();
-                showMessage("תודה! הטופס נשלח בהצלחה 🎉", true);
-              } else {
-                showMessage("שגיאה: " + (data.error || "משהו השתבש"), false);
-              }
+              console.log("Response:", data);
+              showMessage(
+                "Thank you! Your form is submitted successfully.",
+                true
+              );
+              form.reset();
             })
             .catch((error) => {
               console.error("Error:", error);
-              showMessage("שגיאה בשליחה, נסה שוב בבקשה.", false);
+              showMessage("Error sending form. Please try again.", false);
             });
         });
       });

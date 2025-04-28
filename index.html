@@ -782,7 +782,26 @@
             </div>
           </div>
           <div>
-            <form id="contact-form" name="contact-form" class="space-y-4">
+            <form
+              id="contact-form"
+              name="contact-form"
+              action="https://formsubmit.co/eat.pray.avi@gmail.com"
+              method="POST"
+              class="space-y-4"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Tour Registration - Eat Pray Avi"
+              />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <!-- <input
+                type="hidden"
+                name="_next"
+                value="https://www.eat-pray-avi.com/"
+              /> -->
+
               <div>
                 <label
                   for="name"
@@ -795,6 +814,7 @@
                   type="text"
                   name="name"
                   id="name"
+                  required
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 />
               </div>
@@ -810,6 +830,8 @@
                   type="tel"
                   id="phone"
                   name="phone"
+                  required
+                  pattern="[0-9]{9,15}"
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 />
               </div>
@@ -825,6 +847,7 @@
                   type="email"
                   id="email"
                   name="email"
+                  required
                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 />
               </div>
@@ -1147,6 +1170,41 @@
           closeModal();
         }
       });
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   const form = document.getElementById("contact-form");
+      //   const formMessage = document.getElementById("formMessage");
+
+      //   // Keep your existing showMessage function
+      //   function showMessage(message, isSuccess = true) {
+      //     formMessage.textContent = message;
+      //     formMessage.className =
+      //       "fixed bottom-4 right-4 py-2 px-4 rounded-lg shadow-lg text-lg z-50 transition-all duration-500 " +
+      //       (isSuccess ? "bg-green-500 text-white" : "bg-red-500 text-white");
+      //     formMessage.classList.remove("hidden");
+
+      //     setTimeout(() => {
+      //       formMessage.classList.add("hidden");
+      //     }, 4000);
+      //   }
+
+      //   // The form will now submit directly to FormSubmit, but we can still add our own UX
+      //   form.addEventListener("submit", (e) => {
+      //     // We don't prevent default - let the form submit naturally
+
+      //     // Find the submit button and disable it to prevent multiple submissions
+      //     const button = form.querySelector("button[type='submit']");
+      //     button.disabled = true;
+
+      //     // Change button text to show it's processing
+      //     const enSpan = button.querySelector(".en");
+      //     const heSpan = button.querySelector(".he");
+
+      //     if (enSpan) enSpan.textContent = "Submitting...";
+      //     if (heSpan) heSpan.textContent = "שולח...";
+
+      //     // Form will submit automatically to FormSubmit
+      //   });
+      // });
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("contact-form");
         const formMessage = document.getElementById("formMessage");
@@ -1160,33 +1218,34 @@
 
           setTimeout(() => {
             formMessage.classList.add("hidden");
-          }, 4000); // נעלם אחרי 4 שניות
+          }, 4000);
         }
-        const scriptURL =
-          "https://script.google.com/macros/s/AKfycbyamtN_dsQeCOnjnvuirZ5I2mLMVqvqWyRSf5uYSkkco5HR4Pbl5HHiMrNJIMuHuqyYyQ/exec";
 
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault(); // <<< THIS PREVENTS REDIRECT
 
           const formData = new FormData(form);
 
-          fetch(scriptURL, {
-            method: "POST",
-            body: formData,
-          })
-            .then((response) => response.text())
-            .then((data) => {
-              console.log("Response:", data);
-              showMessage(
-                "Thank you! Your form is submitted successfully.",
-                true
-              );
-              form.reset();
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-              showMessage("Error sending form. Please try again.", false);
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
             });
+
+            if (response.ok) {
+              showMessage(
+                "Thank you! Your registration was sent successfully."
+              );
+              form.reset(); // Optional: clear the form after success
+            } else {
+              showMessage("Something went wrong. Please try again.", false);
+            }
+          } catch (error) {
+            showMessage("Something went wrong. Please try again.", false);
+          }
         });
       });
     </script>
